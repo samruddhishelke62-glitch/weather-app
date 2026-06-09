@@ -460,7 +460,7 @@ history.unshift(city);
 }
 
 history =
-history.slice(0,5);
+history.slice(0,3);
 
 localStorage.setItem(
 "history",
