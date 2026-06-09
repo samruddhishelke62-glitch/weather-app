@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Weather Dashboard</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🌦 Smart Weather Dashboard</h1>
+
+<div class="search-box">
+<input type="text" id="cityInput" placeholder="Enter city name">
+<button onclick="getWeather()">Search</button>
+</div>
+
+<button id="locationBtn">📍 My Location</button>
+
+<div class="weather-card">
+
+<div id="weatherIcon" class="icon">☀️</div>
+
+<h2 id="cityName">City Name</h2>
+
+<h1 id="temp">--°C</h1>
+
+<p id="condition">Weather Condition</p>
+
+<p id="dateTime"></p>
+
+<div class="details">
+
+<div>
+Humidity
+<p id="humidity">--%</p>
+</div>
+
+<div>
+Wind
+<p id="wind">-- km/h</p>
+</div>
+
+</div>
+
+</div>
+
+<div id="alertBox" class="alert-box"></div>
+
+<div class="controls">
+<button id="themeBtn">🌙 Theme</button>
+<button id="unitBtn">°C / °F</button>
+</div>
+
+<h2>5 Day Forecast</h2>
+
+<div id="forecast" class="forecast"></div>
+
+<h2>Recent Searches</h2>
+
+<div id="history"></div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
