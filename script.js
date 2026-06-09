@@ -345,23 +345,41 @@ function showForecast(
 
 function changeBackground(code){
 
-  if(code===0){
+const rain =
+document.querySelector(".rain");
 
-    document.body.style.background =
-      "linear-gradient(135deg,#4facfe,#00f2fe)";
-  }
+if(code === 0){
 
-  else if(code>=61){
+document.body.style.background =
+"linear-gradient(135deg,#4facfe,#00f2fe)";
 
-    document.body.style.background =
-      "linear-gradient(135deg,#434343,#000000)";
-  }
+if(rain){
+rain.style.display = "none";
+}
 
-  else{
+}
 
-    document.body.style.background =
-      "linear-gradient(135deg,#667eea,#764ba2)";
-  }
+else if(code >= 61 && code <= 65){
+
+document.body.style.background =
+"linear-gradient(135deg,#434343,#000000)";
+
+if(rain){
+rain.style.display = "block";
+}
+
+}
+
+else{
+
+document.body.style.background =
+"linear-gradient(135deg,#667eea,#764ba2)";
+
+if(rain){
+rain.style.display = "none";
+}
+
+}
 }
 
 document
