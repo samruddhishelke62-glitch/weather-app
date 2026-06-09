@@ -3,68 +3,192 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Smart Weather Dashboard</title>
 
 <link rel="stylesheet" href="style.css">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
 </head>
 
 <body>
 
 <div class="container">
 
-<h1>🌦 Smart Weather Dashboard</h1>
+<header>
+
+<h1>
+<i class="fa-solid fa-cloud-sun"></i>
+Smart Weather Dashboard
+</h1>
+
+<div class="top-controls">
 
 <div class="search-box">
-<input type="text" id="cityInput" placeholder="Enter city name">
-<button onclick="getWeather()">Search</button>
+
+<input
+type="text"
+id="cityInput"
+placeholder="Search city..."
+>
+
+<button onclick="getWeather()">
+Search
+</button>
+
 </div>
 
-<button id="locationBtn">📍 My Location</button>
+<div class="action-buttons">
 
-<div class="weather-card">
+<button id="locationBtn">
+📍 My Location
+</button>
 
-<div id="weatherIcon" class="icon">☀️</div>
+<button id="themeBtn">
+🌙 Theme
+</button>
 
-<h2 id="cityName">City Name</h2>
+</div>
 
-<h1 id="temp">--°C</h1>
+</div>
 
-<p id="condition">Weather Condition</p>
+</header>
 
-<p id="dateTime"></p>
+<!-- Current Weather -->
 
-<div class="details">
+<section class="hero-card">
 
-<div>
-Humidity
+<div id="weatherIcon" class="weather-icon">
+☀️
+</div>
+
+<h2 id="cityName">
+Current Location
+</h2>
+
+<h1 id="temp">
+--°C
+</h1>
+
+<p id="condition">
+Weather Condition
+</p>
+
+<p id="dateTime">
+--
+</p>
+
+</section>
+
+<!-- Highlights -->
+
+<section>
+
+<h2 class="section-title">
+Today's Highlights
+</h2>
+
+<div class="highlights-grid">
+
+<div class="highlight-card">
+💧
+<h3>Humidity</h3>
 <p id="humidity">--%</p>
 </div>
 
-<div>
-Wind
+<div class="highlight-card">
+🌬️
+<h3>Wind</h3>
 <p id="wind">-- km/h</p>
 </div>
 
+<div class="highlight-card">
+👁️
+<h3>Visibility</h3>
+<p id="visibility">10 km</p>
+</div>
+
+<div class="highlight-card">
+🌡️
+<h3>Pressure</h3>
+<p id="pressure">--</p>
+</div>
+
+<div class="highlight-card">
+☀️
+<h3>UV Index</h3>
+<p id="uv">--</p>
+</div>
+
+<div class="highlight-card">
+🌅
+<h3>Sunrise</h3>
+<p id="sunrise">--</p>
+</div>
+
+<div class="highlight-card">
+🌇
+<h3>Sunset</h3>
+<p id="sunset">--</p>
+</div>
+
+<div class="highlight-card">
+🌧️
+<h3>Rain Chance</h3>
+<p id="rainChance">--%</p>
 </div>
 
 </div>
 
-<div id="alertBox" class="alert-box"></div>
+</section>
 
-<div class="controls">
-<button id="themeBtn">🌙 Theme</button>
-<button id="unitBtn">°C / °F</button>
+<!-- Alert -->
+
+<div id="alertBox" class="alert-box">
+Weather Alert
 </div>
 
-<h2>5 Day Forecast</h2>
+<!-- Forecast -->
 
-<div id="forecast" class="forecast"></div>
+<section>
 
-<h2>Recent Searches</h2>
+<h2 class="section-title">
+5 Day Forecast
+</h2>
 
-<div id="history"></div>
+<div id="forecast" class="forecast-container">
+
+</div>
+
+</section>
+
+<!-- Search History -->
+
+<section>
+
+<h2 class="section-title">
+Recent Searches
+</h2>
+
+<div id="history" class="history-container">
+
+</div>
+
+</section>
+
+<footer>
+
+
+
+<p>
+Created by Samruddhi shelke
+</p>
+
+</footer>
 
 </div>
 
